@@ -17,9 +17,9 @@ from keras.utils.vis_utils import plot_model
 
 timestart=datetime.datetime.now()
 k=128
-ratings=pd.read_csv("/media/jxnu/Data/dataset/ml-100k/u2.base",sep="\t",names=["user_id","movie_id","rating","timestamp"])
+ratings=pd.read_csv("~/ml-100k/u1.base",sep="\t",names=["user_id","movie_id","rating","timestamp"])
 
-test=pd.read_csv("/media/jxnu/Data/dataset/ml-100k/u2.test",sep="\t",names=["user_id","movie_id","rating","timestamp"])
+test=pd.read_csv("~/ml-100k/u1.test",sep="\t",names=["user_id","movie_id","rating","timestamp"])
 
 n_users=np.max(ratings["user_id"])
 
@@ -73,18 +73,7 @@ X_train=[users,movies]
 
 Y_train=ratings['rating'].values
 
-# model.fit(X_train,Y_train,batch_size=100,epochs=50)
-model.load_weights('my_model_weight.h5')
-# plot_model(model,to_file='model.png')
-# model.save_weights('my_model_weight.h5')
-# users_test=test['user_id'].values
-
-# item_test=test['movie_id'].values
-#
-# rating_test=test['rating'].values
-
-# model.save('my_model.h5')
-# json_string=model.to_json()
+model.fit(X_train,Y_train,batch_size=100,epochs=50)
 
 sum=0
 
