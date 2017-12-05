@@ -1,1 +1,13 @@
-my first github project
+这是一个简单的小测试，使用keras 进行简单的搭建SVD算法，建立在电影数据集movielens 100k上，
+
+#movielens 100k 可以自行下载
+
+要划分测试集和验证集，
+
+使用均方误差进行评估模型
+
+
+
+
+
+
